@@ -1,0 +1,22 @@
+\documentclass[11pt]{article}
+
+\usepackage[top=2cm, bottom=2cm, left=3cm, right=3cm]{geometry}
+\usepackage{prftree}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{xifthen}
+
+\prflineextra=0em
+\prflinepadbefore=0.5ex
+\prflinepadafter=0.2ex
+\prfrulenameskip=0.2em
+
+\newcommand{\abs}{\bottom}
+\newcommand{\lto}{\rightarrow}
+\newcommand{\lequiv}{\leftrightarrow}
+\newcommand{\irule}[2]{\scriptsize\ifthenelse{\equal{#1}{}}{$#2$}{$#2_{#1}$}}
+\newcommand{\iruleI}[2][]{\irule{#1}{{#2}I}}
+\newcommand{\iruleE}[2][]{\irule{#1}{{#2}E}}
+
+\begin{document}

@@ -1,0 +1,764 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proofs>
+  <proofnode>
+    <formula>((p and q) imply p)</formula>
+    <graphicalposition>
+      <x>150</x>
+      <y>110</y>
+    </graphicalposition>
+    <children>
+      <proofnode>
+        <formula>p</formula>
+        <graphicalposition>
+          <x>150</x>
+          <y>91</y>
+        </graphicalposition>
+        <children>
+          <proofnode>
+            <formula>(p and q)</formula>
+            <graphicalposition>
+              <x>150</x>
+              <y>65</y>
+            </graphicalposition>
+            <children />
+          </proofnode>
+        </children>
+      </proofnode>
+    </children>
+  </proofnode>
+  <proofnode>
+    <formula>(p imply ((p imply q) imply q))</formula>
+    <graphicalposition>
+      <x>402</x>
+      <y>131</y>
+    </graphicalposition>
+    <children>
+      <proofnode>
+        <formula>((p imply q) imply q)</formula>
+        <graphicalposition>
+          <x>402</x>
+          <y>105</y>
+        </graphicalposition>
+        <children>
+          <proofnode>
+            <formula>q</formula>
+            <graphicalposition>
+              <x>402</x>
+              <y>86</y>
+            </graphicalposition>
+            <children>
+              <proofnode>
+                <formula>(p imply q)</formula>
+                <graphicalposition>
+                  <x>372</x>
+                  <y>60</y>
+                </graphicalposition>
+                <children />
+              </proofnode>
+              <proofnode>
+                <formula>p</formula>
+                <graphicalposition>
+                  <x>462</x>
+                  <y>67</y>
+                </graphicalposition>
+                <children />
+              </proofnode>
+            </children>
+          </proofnode>
+        </children>
+      </proofnode>
+    </children>
+  </proofnode>
+  <proofnode>
+    <formula>(p imply (q imply (p and q)))</formula>
+    <graphicalposition>
+      <x>693</x>
+      <y>136</y>
+    </graphicalposition>
+    <children>
+      <proofnode>
+        <formula>(q imply (p and q))</formula>
+        <graphicalposition>
+          <x>693</x>
+          <y>110</y>
+        </graphicalposition>
+        <children>
+          <proofnode>
+            <formula>(p and q)</formula>
+            <graphicalposition>
+              <x>693</x>
+              <y>84</y>
+            </graphicalposition>
+            <children>
+              <proofnode>
+                <formula>p</formula>
+                <graphicalposition>
+                  <x>662</x>
+                  <y>65</y>
+                </graphicalposition>
+                <children />
+              </proofnode>
+              <proofnode>
+                <formula>q</formula>
+                <graphicalposition>
+                  <x>723</x>
+                  <y>65</y>
+                </graphicalposition>
+                <children />
+              </proofnode>
+            </children>
+          </proofnode>
+        </children>
+      </proofnode>
+    </children>
+  </proofnode>
+  <proofnode>
+    <formula>(p imply (p and p))</formula>
+    <graphicalposition>
+      <x>944</x>
+      <y>122</y>
+    </graphicalposition>
+    <children>
+      <proofnode>
+        <formula>(p and p)</formula>
+        <graphicalposition>
+          <x>944</x>
+          <y>96</y>
+        </graphicalposition>
+        <children>
+          <proofnode>
+            <formula>p</formula>
+            <graphicalposition>
+              <x>913</x>
+              <y>77</y>
+            </graphicalposition>
+            <children />
+          </proofnode>
+          <proofnode>
+            <formula>p</formula>
+            <graphicalposition>
+              <x>974</x>
+              <y>77</y>
+            </graphicalposition>
+            <children />
+          </proofnode>
+        </children>
+      </proofnode>
+    </children>
+  </proofnode>
+  <proofnode>
+    <formula>(p imply (q imply p))</formula>
+    <graphicalposition>
+      <x>1190</x>
+      <y>120</y>
+    </graphicalposition>
+    <children>
+      <proofnode>
+        <formula>(q imply p)</formula>
+        <graphicalposition>
+          <x>1190</x>
+          <y>94</y>
+        </graphicalposition>
+        <children>
+          <proofnode>
+            <formula>p</formula>
+            <graphicalposition>
+              <x>1190</x>
+              <y>75</y>
+            </graphicalposition>
+            <children />
+          </proofnode>
+        </children>
+      </proofnode>
+    </children>
+  </proofnode>
+  <proofnode>
+    <formula>((p and q) imply (p or q))</formula>
+    <graphicalposition>
+      <x>1437</x>
+      <y>139</y>
+    </graphicalposition>
+    <children>
+      <proofnode>
+        <formula>(p or q)</formula>
+        <graphicalposition>
+          <x>1437</x>
+          <y>113</y>
+        </graphicalposition>
+        <children>
+          <proofnode>
+            <formula>p</formula>
+            <graphicalposition>
+              <x>1437</x>
+              <y>94</y>
+            </graphicalposition>
+            <children>
+              <proofnode>
+                <formula>(p and q)</formula>
+                <graphicalposition>
+                  <x>1437</x>
+                  <y>68</y>
+                </graphicalposition>
+                <children />
+              </proofnode>
+            </children>
+          </proofnode>
+        </children>
+      </proofnode>
+    </children>
+  </proofnode>
+  <proofnode>
+    <formula>((p imply (q imply r)) imply ((p and q) imply r))</formula>
+    <graphicalposition>
+      <x>351</x>
+      <y>344</y>
+    </graphicalposition>
+    <children>
+      <proofnode>
+        <formula>((p and q) imply r)</formula>
+        <graphicalposition>
+          <x>351</x>
+          <y>318</y>
+        </graphicalposition>
+        <children>
+          <proofnode>
+            <formula>r</formula>
+            <graphicalposition>
+              <x>351</x>
+              <y>303</y>
+            </graphicalposition>
+            <children>
+              <proofnode>
+                <formula>(q imply r)</formula>
+                <graphicalposition>
+                  <x>295</x>
+                  <y>277</y>
+                </graphicalposition>
+                <children>
+                  <proofnode>
+                    <formula>(p imply (q imply r))</formula>
+                    <graphicalposition>
+                      <x>240</x>
+                      <y>251</y>
+                    </graphicalposition>
+                    <children />
+                  </proofnode>
+                  <proofnode>
+                    <formula>p</formula>
+                    <graphicalposition>
+                      <x>383</x>
+                      <y>258</y>
+                    </graphicalposition>
+                    <children>
+                      <proofnode>
+                        <formula>(p and q)</formula>
+                        <graphicalposition>
+                          <x>383</x>
+                          <y>232</y>
+                        </graphicalposition>
+                        <children />
+                      </proofnode>
+                    </children>
+                  </proofnode>
+                </children>
+              </proofnode>
+              <proofnode>
+                <formula>q</formula>
+                <graphicalposition>
+                  <x>494</x>
+                  <y>284</y>
+                </graphicalposition>
+                <children>
+                  <proofnode>
+                    <formula>(p and q)</formula>
+                    <graphicalposition>
+                      <x>494</x>
+                      <y>258</y>
+                    </graphicalposition>
+                    <children />
+                  </proofnode>
+                </children>
+              </proofnode>
+            </children>
+          </proofnode>
+        </children>
+      </proofnode>
+    </children>
+  </proofnode>
+  <proofnode>
+    <formula>(((p and q) imply r) imply (p imply (q imply r)))</formula>
+    <graphicalposition>
+      <x>832</x>
+      <y>352</y>
+    </graphicalposition>
+    <children>
+      <proofnode>
+        <formula>(p imply (q imply r))</formula>
+        <graphicalposition>
+          <x>832</x>
+          <y>326</y>
+        </graphicalposition>
+        <children>
+          <proofnode>
+            <formula>(q imply r)</formula>
+            <graphicalposition>
+              <x>832</x>
+              <y>300</y>
+            </graphicalposition>
+            <children>
+              <proofnode>
+                <formula>r</formula>
+                <graphicalposition>
+                  <x>832</x>
+                  <y>285</y>
+                </graphicalposition>
+                <children>
+                  <proofnode>
+                    <formula>((p and q) imply r)</formula>
+                    <graphicalposition>
+                      <x>771</x>
+                      <y>259</y>
+                    </graphicalposition>
+                    <children />
+                  </proofnode>
+                  <proofnode>
+                    <formula>(p and q)</formula>
+                    <graphicalposition>
+                      <x>916</x>
+                      <y>259</y>
+                    </graphicalposition>
+                    <children>
+                      <proofnode>
+                        <formula>p</formula>
+                        <graphicalposition>
+                          <x>885</x>
+                          <y>240</y>
+                        </graphicalposition>
+                        <children />
+                      </proofnode>
+                      <proofnode>
+                        <formula>q</formula>
+                        <graphicalposition>
+                          <x>946</x>
+                          <y>240</y>
+                        </graphicalposition>
+                        <children />
+                      </proofnode>
+                    </children>
+                  </proofnode>
+                </children>
+              </proofnode>
+            </children>
+          </proofnode>
+        </children>
+      </proofnode>
+    </children>
+  </proofnode>
+  <proofnode>
+    <formula>((p imply (q and r)) imply ((p imply q) and (p imply r)))</formula>
+    <graphicalposition>
+      <x>1317</x>
+      <y>350</y>
+    </graphicalposition>
+    <children>
+      <proofnode>
+        <formula>((p imply q) and (p imply r))</formula>
+        <graphicalposition>
+          <x>1317</x>
+          <y>324</y>
+        </graphicalposition>
+        <children>
+          <proofnode>
+            <formula>(p imply q)</formula>
+            <graphicalposition>
+              <x>1203</x>
+              <y>298</y>
+            </graphicalposition>
+            <children>
+              <proofnode>
+                <formula>q</formula>
+                <graphicalposition>
+                  <x>1203</x>
+                  <y>279</y>
+                </graphicalposition>
+                <children>
+                  <proofnode>
+                    <formula>(q and r)</formula>
+                    <graphicalposition>
+                      <x>1203</x>
+                      <y>253</y>
+                    </graphicalposition>
+                    <children>
+                      <proofnode>
+                        <formula>(p imply (q and r))</formula>
+                        <graphicalposition>
+                          <x>1172</x>
+                          <y>227</y>
+                        </graphicalposition>
+                        <children />
+                      </proofnode>
+                      <proofnode>
+                        <formula>p</formula>
+                        <graphicalposition>
+                          <x>1286</x>
+                          <y>234</y>
+                        </graphicalposition>
+                        <children />
+                      </proofnode>
+                    </children>
+                  </proofnode>
+                </children>
+              </proofnode>
+            </children>
+          </proofnode>
+          <proofnode>
+            <formula>(p imply r)</formula>
+            <graphicalposition>
+              <x>1431</x>
+              <y>298</y>
+            </graphicalposition>
+            <children>
+              <proofnode>
+                <formula>r</formula>
+                <graphicalposition>
+                  <x>1431</x>
+                  <y>283</y>
+                </graphicalposition>
+                <children>
+                  <proofnode>
+                    <formula>(q and r)</formula>
+                    <graphicalposition>
+                      <x>1431</x>
+                      <y>257</y>
+                    </graphicalposition>
+                    <children>
+                      <proofnode>
+                        <formula>(p imply (q and r))</formula>
+                        <graphicalposition>
+                          <x>1400</x>
+                          <y>231</y>
+                        </graphicalposition>
+                        <children />
+                      </proofnode>
+                      <proofnode>
+                        <formula>p</formula>
+                        <graphicalposition>
+                          <x>1514</x>
+                          <y>238</y>
+                        </graphicalposition>
+                        <children />
+                      </proofnode>
+                    </children>
+                  </proofnode>
+                </children>
+              </proofnode>
+            </children>
+          </proofnode>
+        </children>
+      </proofnode>
+    </children>
+  </proofnode>
+  <proofnode>
+    <formula>(((p imply q) and (p imply r)) imply (p imply (q and r)))</formula>
+    <graphicalposition>
+      <x>573</x>
+      <y>591</y>
+    </graphicalposition>
+    <children>
+      <proofnode>
+        <formula>(p imply (q and r))</formula>
+        <graphicalposition>
+          <x>573</x>
+          <y>565</y>
+        </graphicalposition>
+        <children>
+          <proofnode>
+            <formula>(q and r)</formula>
+            <graphicalposition>
+              <x>573</x>
+              <y>539</y>
+            </graphicalposition>
+            <children>
+              <proofnode>
+                <formula>q</formula>
+                <graphicalposition>
+                  <x>429</x>
+                  <y>520</y>
+                </graphicalposition>
+                <children>
+                  <proofnode>
+                    <formula>(p imply q)</formula>
+                    <graphicalposition>
+                      <x>398</x>
+                      <y>494</y>
+                    </graphicalposition>
+                    <children>
+                      <proofnode>
+                        <formula>((p imply q) and (p imply r))</formula>
+                        <graphicalposition>
+                          <x>398</x>
+                          <y>468</y>
+                        </graphicalposition>
+                        <children />
+                      </proofnode>
+                    </children>
+                  </proofnode>
+                  <proofnode>
+                    <formula>p</formula>
+                    <graphicalposition>
+                      <x>542</x>
+                      <y>501</y>
+                    </graphicalposition>
+                    <children />
+                  </proofnode>
+                </children>
+              </proofnode>
+              <proofnode>
+                <formula>r</formula>
+                <graphicalposition>
+                  <x>717</x>
+                  <y>524</y>
+                </graphicalposition>
+                <children>
+                  <proofnode>
+                    <formula>(p imply r)</formula>
+                    <graphicalposition>
+                      <x>686</x>
+                      <y>498</y>
+                    </graphicalposition>
+                    <children>
+                      <proofnode>
+                        <formula>((p imply q) and (p imply r))</formula>
+                        <graphicalposition>
+                          <x>686</x>
+                          <y>472</y>
+                        </graphicalposition>
+                        <children />
+                      </proofnode>
+                    </children>
+                  </proofnode>
+                  <proofnode>
+                    <formula>p</formula>
+                    <graphicalposition>
+                      <x>830</x>
+                      <y>505</y>
+                    </graphicalposition>
+                    <children />
+                  </proofnode>
+                </children>
+              </proofnode>
+            </children>
+          </proofnode>
+        </children>
+      </proofnode>
+    </children>
+  </proofnode>
+  <proofnode>
+    <formula>(((p or q) imply r) imply ((p imply r) and (q imply r)))</formula>
+    <graphicalposition>
+      <x>1170</x>
+      <y>589</y>
+    </graphicalposition>
+    <children>
+      <proofnode>
+        <formula>((p imply r) and (q imply r))</formula>
+        <graphicalposition>
+          <x>1170</x>
+          <y>563</y>
+        </graphicalposition>
+        <children>
+          <proofnode>
+            <formula>(p imply r)</formula>
+            <graphicalposition>
+              <x>1031</x>
+              <y>537</y>
+            </graphicalposition>
+            <children>
+              <proofnode>
+                <formula>r</formula>
+                <graphicalposition>
+                  <x>1031</x>
+                  <y>522</y>
+                </graphicalposition>
+                <children>
+                  <proofnode>
+                    <formula>((p or q) imply r)</formula>
+                    <graphicalposition>
+                      <x>975</x>
+                      <y>496</y>
+                    </graphicalposition>
+                    <children />
+                  </proofnode>
+                  <proofnode>
+                    <formula>(p or q)</formula>
+                    <graphicalposition>
+                      <x>1114</x>
+                      <y>496</y>
+                    </graphicalposition>
+                    <children>
+                      <proofnode>
+                        <formula>p</formula>
+                        <graphicalposition>
+                          <x>1114</x>
+                          <y>477</y>
+                        </graphicalposition>
+                        <children />
+                      </proofnode>
+                    </children>
+                  </proofnode>
+                </children>
+              </proofnode>
+            </children>
+          </proofnode>
+          <proofnode>
+            <formula>(q imply r)</formula>
+            <graphicalposition>
+              <x>1309</x>
+              <y>537</y>
+            </graphicalposition>
+            <children>
+              <proofnode>
+                <formula>r</formula>
+                <graphicalposition>
+                  <x>1309</x>
+                  <y>522</y>
+                </graphicalposition>
+                <children>
+                  <proofnode>
+                    <formula>((p or q) imply r)</formula>
+                    <graphicalposition>
+                      <x>1253</x>
+                      <y>496</y>
+                    </graphicalposition>
+                    <children />
+                  </proofnode>
+                  <proofnode>
+                    <formula>(p or q)</formula>
+                    <graphicalposition>
+                      <x>1392</x>
+                      <y>496</y>
+                    </graphicalposition>
+                    <children>
+                      <proofnode>
+                        <formula>q</formula>
+                        <graphicalposition>
+                          <x>1392</x>
+                          <y>477</y>
+                        </graphicalposition>
+                        <children />
+                      </proofnode>
+                    </children>
+                  </proofnode>
+                </children>
+              </proofnode>
+            </children>
+          </proofnode>
+        </children>
+      </proofnode>
+    </children>
+  </proofnode>
+  <proofnode>
+    <formula>(((p imply r) and (q imply r)) imply ((p or q) imply r))</formula>
+    <graphicalposition>
+      <x>819</x>
+      <y>813</y>
+    </graphicalposition>
+    <children>
+      <proofnode>
+        <formula>((p or q) imply r)</formula>
+        <graphicalposition>
+          <x>819</x>
+          <y>787</y>
+        </graphicalposition>
+        <children>
+          <proofnode>
+            <formula>r</formula>
+            <graphicalposition>
+              <x>819</x>
+              <y>772</y>
+            </graphicalposition>
+            <children>
+              <proofnode>
+                <formula>(p or q)</formula>
+                <graphicalposition>
+                  <x>535</x>
+                  <y>746</y>
+                </graphicalposition>
+                <children />
+              </proofnode>
+              <proofnode>
+                <formula>r</formula>
+                <graphicalposition>
+                  <x>733</x>
+                  <y>757</y>
+                </graphicalposition>
+                <children>
+                  <proofnode>
+                    <formula>(p imply r)</formula>
+                    <graphicalposition>
+                      <x>702</x>
+                      <y>731</y>
+                    </graphicalposition>
+                    <children>
+                      <proofnode>
+                        <formula>((p imply r) and (q imply r))</formula>
+                        <graphicalposition>
+                          <x>702</x>
+                          <y>705</y>
+                        </graphicalposition>
+                        <children />
+                      </proofnode>
+                    </children>
+                  </proofnode>
+                  <proofnode>
+                    <formula>p</formula>
+                    <graphicalposition>
+                      <x>844</x>
+                      <y>738</y>
+                    </graphicalposition>
+                    <children />
+                  </proofnode>
+                </children>
+              </proofnode>
+              <proofnode>
+                <formula>r</formula>
+                <graphicalposition>
+                  <x>1017</x>
+                  <y>757</y>
+                </graphicalposition>
+                <children>
+                  <proofnode>
+                    <formula>(q imply r)</formula>
+                    <graphicalposition>
+                      <x>986</x>
+                      <y>731</y>
+                    </graphicalposition>
+                    <children>
+                      <proofnode>
+                        <formula>((p imply r) and (q imply r))</formula>
+                        <graphicalposition>
+                          <x>986</x>
+                          <y>705</y>
+                        </graphicalposition>
+                        <children />
+                      </proofnode>
+                    </children>
+                  </proofnode>
+                  <proofnode>
+                    <formula>q</formula>
+                    <graphicalposition>
+                      <x>1128</x>
+                      <y>738</y>
+                    </graphicalposition>
+                    <children />
+                  </proofnode>
+                </children>
+              </proofnode>
+            </children>
+          </proofnode>
+        </children>
+      </proofnode>
+    </children>
+  </proofnode>
+</proofs>
+
