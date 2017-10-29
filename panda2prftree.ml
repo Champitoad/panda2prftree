@@ -6,7 +6,7 @@ module FormMap = Map.Make(Ordered)
 type assum_binder = { mutable refs: int FormMap.t; ref: int ref }
 
 let infer_rule concl prems assum_binder =
-  let bind_assum phi assum_binder =
+  let bind_assum phi =
     let ref = !(assum_binder.ref) + 1 in
     assum_binder.refs <- FormMap.add phi ref assum_binder.refs;
     assum_binder.ref := ref;
@@ -26,7 +26,7 @@ let infer_rule concl prems assum_binder =
        | `Neg ->
          (match prems with
           | [Const `False] ->
-            let ref_phi = bind_assum phi assum_binder in
+            let ref_phi = bind_assum phi in
             BoundRule (IRule [LogCst `Neg], [ref_phi])
           | _ -> UnknownRule))
     | BinaryForm (phi, op, psi) ->
@@ -46,7 +46,7 @@ let infer_rule concl prems assum_binder =
        | `Imply ->
          (match prems with
           | [psi'] when psi' = psi ->
-            let ref_phi = bind_assum phi assum_binder in
+            let ref_phi = bind_assum phi in
             BoundRule (IRule [LogCst `Imply], [ref_phi])
           | _ -> UnknownRule)
        | `Equiv ->
@@ -68,8 +68,8 @@ let infer_rule concl prems assum_binder =
      | [BinaryForm (phi, `And, psi)] when psi = concl ->
        FreeRule (ERule [Str "r"; LogCst `And])
      | [BinaryForm (phi, `Or, psi); chi; chi'] when chi = concl && chi = chi' ->
-       let ref_phi = bind_assum phi assum_binder in
-       let ref_psi = bind_assum psi assum_binder in
+       let ref_phi = bind_assum phi in
+       let ref_psi = bind_assum psi in
        BoundRule (ERule [LogCst `Or], [ref_phi; ref_psi])
      | [BinaryForm (phi, `Imply, psi); phi'] when psi = concl && phi = phi' ->
        FreeRule (ERule [LogCst `Imply])
