@@ -1,7 +1,7 @@
 open Printf
 open Form
 
-type rule_name_token = LogCst of logconst | Str of string
+type rule_name_token = LogCst of logcst | Str of string
 type rule_name = rule_name_token list
 type free_rule =
   | IRule of rule_name

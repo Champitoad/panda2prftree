@@ -17,21 +17,21 @@ prog:
   ;
 
 form:
-  | atom = NAME { Atom atom }
-  | cst = const { Const cst }
+  | prop = NAME { Pred (prop, []) }
+  | op = zop { ZOp op }
   | LPAREN; phi = unparen_form; RPAREN { phi }
   ;
 
 unparen_form:
-  | atom = NAME { Atom atom }
+  | prop = NAME { Pred (prop, []) }
   | pred = NAME; SPACE; vars = separated_nonempty_list(SPACE, NAME) { Pred (pred, vars) }
-  | cst = const { Const cst }
+  | op = zop { ZOp op }
   | op = unop; phi = form { UnaryForm (op, phi) }
   | phi = form; op = binop; psi = form { BinaryForm (phi, op, psi) }
   | qt = quant; var = NAME; SPACE; phi = form { QuantForm (qt, var, phi) }
   ;
 
-const:
+zop:
   | FALSE { `False }
 
 unop:

@@ -27,12 +27,10 @@ let ( $= ) l1 l2 =
 (* Whether formula phi' can be obtained from formula phi by exactly 1 substitution *)
 let rec ( $=$ ) phi' phi =
   match (phi', phi) with
-  | (Atom atom', Atom atom) ->
-    atom' = atom
   | (Pred (pred', vars'), Pred (pred, vars)) ->
     pred' = pred && vars' $= vars
-  | (Const cst', Const cst) ->
-    cst' = cst
+  | (ZOp op', ZOp op) ->
+    op' = op
   | (UnaryForm (op', psi'), UnaryForm (op, psi)) ->
     op' = op && psi' $=$ psi
   | (BinaryForm (psi', op', chi'), BinaryForm (psi, op, chi)) ->
@@ -48,9 +46,8 @@ let ( $< ) l (n, o) =
 (* Formula phi with term t substituted to variable var *)
 let rec ( $<$ ) phi (t, var) =
   match phi with
-  | Atom atom -> phi
   | Pred (pred, vars) -> Pred (pred, vars $< (t, var))
-  | Const cst -> phi
+  | ZOp op -> phi
   | UnaryForm (op, psi) -> UnaryForm (op, psi $<$ (t, var))
   | BinaryForm (psi, op, chi) -> BinaryForm (psi $<$ (t, var), op, chi $<$ (t, var))
   | QuantForm (qt, var', psi) ->

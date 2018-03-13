@@ -14,8 +14,8 @@ let infer_rule concl prems assum_binder =
   in
   let irule =
     match concl with
-    | Const cst ->
-      (match cst with
+    | ZOp op ->
+      (match op with
        | `False ->
          (match prems with
           | [phi; UnaryForm (`Neg, phi')] when phi = phi' ->
@@ -25,7 +25,7 @@ let infer_rule concl prems assum_binder =
       (match op with
        | `Neg ->
          (match prems with
-          | [Const `False] ->
+          | [ZOp `False] ->
             let ref_phi = bind_assum phi in
             BoundRule (IRule [LogCst `Neg], [ref_phi])
           | _ -> UnknownRule))
@@ -59,7 +59,7 @@ let infer_rule concl prems assum_binder =
   in match irule with
   | UnknownRule ->
     (match prems with
-     | [Const `False] ->
+     | [ZOp `False] ->
        FreeRule (ERule [LogCst `False])
      | [UnaryForm (`Neg, UnaryForm (`Neg, phi))] when phi = concl ->
        FreeRule (ERule [LogCst `Neg; LogCst `Neg])
@@ -127,7 +127,7 @@ let proofs_of_panda = function
   | _ -> raise Invalid_tag_name
 
 let prftree_of_proof prf =
-  let string_of_logconst = function
+  let string_of_logcst = function
     | `False  -> "\\abs"
     | `Neg    -> "\\neg"
     | `And    -> "\\land"
@@ -139,17 +139,17 @@ let prftree_of_proof prf =
   in 
   let string_of_form form =
     let rec aux n = function
-      | Atom atom ->
-        (match Str.string_match (Str.regexp "[a-z]") atom 0 with
-         | true -> sprintf "\\mathsf{%s}" atom
-         | false -> atom)
+      | Pred (prop, []) ->
+        (match Str.string_match (Str.regexp "[a-z]") prop 0 with
+         | true -> sprintf "\\mathsf{%s}" prop
+         | false -> prop)
       | Pred (pred, vars)          -> sprintf "%s(%s)" pred (String.concat "," vars)
-      | Const cst                  -> sprintf "%s" (string_of_logconst cst)
+      | ZOp op                     -> sprintf "%s" (string_of_logcst op)
       | _ as phi                   -> if n = 0 then unparen n phi else "(" ^ (unparen n phi) ^ ")"
     and unparen n = function
-      | UnaryForm (op, phi)        -> sprintf "%s %s" (string_of_logconst op) (aux (n+1) phi)
-      | BinaryForm (phi, op, psi)  -> sprintf "%s %s %s" (aux (n+1) phi) (string_of_logconst op) (aux (n+1) psi)
-      | QuantForm (qt, var, phi)   -> sprintf "%s %s (%s)" (string_of_logconst qt) var (aux (n+1) phi)
+      | UnaryForm (op, phi)        -> sprintf "%s %s" (string_of_logcst op) (aux (n+1) phi)
+      | BinaryForm (phi, op, psi)  -> sprintf "%s %s %s" (aux (n+1) phi) (string_of_logcst op) (aux (n+1) psi)
+      | QuantForm (qt, var, phi)   -> sprintf "%s %s (%s)" (string_of_logcst qt) var (aux (n+1) phi)
       | _ as phi                   -> aux n phi
     in aux 0 form
   in
@@ -158,7 +158,7 @@ let prftree_of_proof prf =
       (List.map
          (fun token ->
             match token with
-            | LogCst cst -> string_of_logconst cst
+            | LogCst cst -> string_of_logcst cst
             | Str s -> s)
          rn)
   in
